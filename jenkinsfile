@@ -4,6 +4,7 @@ pipeline {
         stage('Build Env') {
             steps {
                 sh 'uname --all'
+                sh 'gcc --version'
             }
         }
     }
