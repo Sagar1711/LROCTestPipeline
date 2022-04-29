@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build Env') {
             steps {
-                sh 'uname --all'
+                sh 'lsb_release -sirc'
                 sh 'gcc --version'
             }
         }
