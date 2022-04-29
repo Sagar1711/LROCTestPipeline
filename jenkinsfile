@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build Env') {
             steps {
-                sh 'lsb_release -sirc'
+                sh 'cat /etc/os-release'
                 sh 'gcc --version'
             }
         }
