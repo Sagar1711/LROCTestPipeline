@@ -2,7 +2,9 @@ pipeline {
     agent {dockerfile true}
     stages {
         stage('Checkout') {
-            checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Sagar1711/LROCTestPipeline.git']]])
+            steps {
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Sagar1711/LROCTestPipeline.git']]])
+            }
         }
         stage('Build Env') {
             steps {
