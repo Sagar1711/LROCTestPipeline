@@ -10,6 +10,7 @@ pipeline {
                 sh 'cat /etc/os-release'
                 sh 'gcc --version'
                 echo "Here is the parameter: ${params.rc_zip_url}"
+                sh "wget ${params.rc_zip_url}"
             }
         }
     }
