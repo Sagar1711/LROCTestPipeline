@@ -11,6 +11,8 @@ pipeline {
                 sh 'gcc --version'
                 echo "Here is the parameter: ${params.rc_zip_url}"
                 sh "wget ${params.rc_zip_url}"
+                sh "unzip ${params.rc_zip_url}"
+                sh "ls"
             }
         }
     }
