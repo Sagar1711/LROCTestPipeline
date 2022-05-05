@@ -1,7 +1,7 @@
 pipeline {
     parameters {
-        string(name: "rc_zip_url", defaultValue: true, description: "Sample boolean parameter")
-        string(name: "rc_tar_url", defaultValue: "ssbostan", trim: true, description: "Sample string parameter")
+        string(name: "rc_zip_url", trim: true description: "Url for release candidate - zip")
+        string(name: "rc_tar_url", trim: true, description: "Url for release candidate - tar")
     }
     agent {dockerfile true}
     stages {
