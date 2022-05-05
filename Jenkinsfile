@@ -9,6 +9,7 @@ pipeline {
             steps {
                 sh 'cat /etc/os-release'
                 sh 'gcc --version'
+                echo '${params.rc_zip_url}'
             }
         }
     }
