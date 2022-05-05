@@ -1,20 +1,14 @@
 pipeline {
+    parameters {
+        string(name: "rc_zip_url", defaultValue: true, description: "Sample boolean parameter")
+        string(name: "rc_tar_url", defaultValue: "ssbostan", trim: true, description: "Sample string parameter")
+    }
     agent {dockerfile true}
     stages {
-        // stage('Checkout') {
-        //     steps {
-        //         checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Sagar1711/LROCTestPipeline.git']]])
-        //     }
-        // }
         stage('Build Env') {
             steps {
                 sh 'uname --all'
                 sh 'gcc --version'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Hello World'
             }
         }
     }
