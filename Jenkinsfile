@@ -1,6 +1,6 @@
 pipeline {
     parameters {
-        string(name: "rc_zip_url", trim: true description: "Url for release candidate - zip")
+        string(name: "rc_zip_url", trim: true, description: "Url for release candidate - zip")
         string(name: "rc_tar_url", trim: true, description: "Url for release candidate - tar")
     }
     agent {dockerfile true}
