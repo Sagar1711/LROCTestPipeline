@@ -12,7 +12,7 @@ pipeline {
                 echo "Here is the parameter: ${params.rc_zip_url}"
                 sh "wget -q ${params.rc_zip_url} -O rc.zip"
                 sh "unzip -q rc.zip"
-                sh "cd ISIS3-6.0.0"
+                sh "cd ISIS3-6.0.0/recipe"
                 sh "sh build.sh"
             }
         }
