@@ -13,7 +13,9 @@ pipeline {
                 sh "wget -q ${params.rc_zip_url}"
                 // sh "ls"
                 sh "unzip 6.0.0.zip"
-                sh "sh 6.0.0/recipe/build.sh"
+                sh "ls"
+                sh "cd 6.0.0"
+                sh "ls"
                 // sh "sh build.sh"
             }
         }
