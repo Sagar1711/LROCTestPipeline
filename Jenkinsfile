@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Build Env') {
             steps {
-                sh 'cat /etc/os-release'
+                sh 'ls'
                 sh 'gcc --version'
                 echo "Here is the parameter: ${params.rc_zip_url}"
                 sh "wget -q ${params.rc_zip_url}"
