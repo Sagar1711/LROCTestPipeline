@@ -14,7 +14,7 @@ pipeline {
                 sh "ls"
                 sh "unzip 6.0.0.zip"
                 sh "ls"
-                sh "./ISIS3-6.0.0/recipe/build.sh"
+                sh "sudo ./ISIS3-6.0.0/recipe/build.sh"
             }
         }
     }
