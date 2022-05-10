@@ -11,10 +11,10 @@ pipeline {
                 // sh 'gcc --version'
                 echo "Here is the parameter: ${params.rc_zip_url}"
                 sh "wget -q ${params.rc_zip_url}"
-                // sh "ls"
+                sh "ls"
                 sh "unzip 6.0.0.zip"
                 sh "ls"
-                sh "cd 6.0.0"
+                sh "cd ISIS3-6.0.0"
                 sh "ls"
                 // sh "sh build.sh"
             }
