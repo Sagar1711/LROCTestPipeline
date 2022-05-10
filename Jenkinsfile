@@ -11,6 +11,7 @@ pipeline {
                 sh 'gcc --version'
                 echo "Here is the parameter: ${params.rc_zip_url}"
                 sh "wget -q ${params.rc_zip_url} -O rc.zip"
+                sh "ls"
                 sh "unzip rc.zip"
                 sh "cd ISIS3-6.0.0/recipe"
                 sh "sh build.sh"
