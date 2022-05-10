@@ -9,11 +9,11 @@ pipeline {
             steps {
                 sh 'ls'
                 // sh 'gcc --version'
-                // echo "Here is the parameter: ${params.rc_zip_url}"
-                // sh "wget -q ${params.rc_zip_url}"
+                echo "Here is the parameter: ${params.rc_zip_url}"
+                sh "wget -q ${params.rc_zip_url}"
                 // sh "ls"
-                // sh "unzip ISIS3-6.0.0.zip"
-                // sh "cd ISIS3-6.0.0/recipe"
+                sh "unzip 6.0.0.zip"
+                sh "sh 6.0.0/recipe/build.sh"
                 // sh "sh build.sh"
             }
         }
