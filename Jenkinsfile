@@ -16,7 +16,9 @@ pipeline {
                 sh "ls"
                 sh "cd ISIS3-6.0.0"
                 sh "ls"
-                // sh "sh build.sh"
+                sh "cd recipe"
+                sh "ls"
+                sh "sudo ./build.sh"
             }
         }
     }
