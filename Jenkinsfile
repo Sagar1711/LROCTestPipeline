@@ -8,13 +8,13 @@ pipeline {
         stage('Build Env') {
             steps {
                 sh 'ls'
-                sh 'gcc --version'
-                echo "Here is the parameter: ${params.rc_zip_url}"
-                sh "wget -q ${params.rc_zip_url}"
-                sh "ls"
-                sh "unzip ISIS3-6.0.0.zip"
-                sh "cd ISIS3-6.0.0/recipe"
-                sh "sh build.sh"
+                // sh 'gcc --version'
+                // echo "Here is the parameter: ${params.rc_zip_url}"
+                // sh "wget -q ${params.rc_zip_url}"
+                // sh "ls"
+                // sh "unzip ISIS3-6.0.0.zip"
+                // sh "cd ISIS3-6.0.0/recipe"
+                // sh "sh build.sh"
             }
         }
     }
